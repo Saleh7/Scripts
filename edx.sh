@@ -25,7 +25,7 @@ sudo apt-get purge lxc-docker
 echo -en "\ec"
 
 echo "| docker-engine |"
-sudo apt-cache policy docker-engine
+sudo apt-cache policy docker-engine -y
 echo -en "\ec"
 
 echo "| Update |"
@@ -33,21 +33,15 @@ sudo apt-get update
 echo -en "\ec"
 
 echo "| linux-image-generic-lts-trusty |"
-sudo apt-get install linux-image-generic-lts-trusty
+sudo apt-get install linux-image-generic-lts-trusty -y
 echo -en "\ec"
 
 echo "| docker-engine |"
-sudo apt-get install docker-engine
+sudo apt-get install docker-engine -y
 echo -en "\ec"
 
 echo "| dockere |"
 sudo service docker start
-echo -en "\ec"
-
-echo "| ------------ |"
-echo "| install EDX |"
-echo "| ------------ |"
-docker pull appsembler/edx-full
 echo -en "\ec"
 
 echo ":)"
